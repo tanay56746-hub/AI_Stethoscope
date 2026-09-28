@@ -1,0 +1,78 @@
+# AI Stethoscope - Centralized Model Training Configuration
+# =============================================================
+# Configuration for multi-task cardiac and respiratory auscultation training.
+# Note: Execution mode is INFRASTRUCTURE ONLY. Model training has NOT started.
+
+experiment:
+  name: "ai_stethoscope_multitask_backbone"
+  version: "1.0.0"
+  description: "Shared audio backbone with Heart, Lung Acoustic, and Lung Disease classification heads"
+  random_seed: 42
+  deterministic: true
+
+hardware:
+  device: "auto"              # Options: "auto", "cuda", "cpu"
+  num_workers: 2             # DataLoader subprocess workers
+  pin_memory: true           # Pin memory for faster GPU tensor transfer
+  mixed_precision: "no"      # Options: "no", "fp16", "bf16" (set to "fp16" when CUDA is active)
+
+data:
+  root_dir: "processed/full"
+  spectrogram_shape: [1, 128, 313]  # (Channels, Mel_Bins, Time_Frames)
+  sample_rate: 16000
+  duration_sec: 5.0
+  batch_size: 32
+  val_batch_size: 32
+  shuffle_train: true
+  drop_last_train: false
+
+loss:
+  class_weighting:
+    enabled: true
+    method: "inverse_frequency"  # weight_i = N / (K * count_i)
+    weights_path: "processed/config/class_weights.json"
+  masked_multitask_loss:
+    enabled: true
+    description: "Computes Cross-Entropy only for heads present in the mini-batch"
+  icbhi_temporal_masked_pooling:
+    enabled: true
+    description: "Applies temporal mask (313,) to pool features only over active respiratory cycle"
+
+optimization:
+  optimizer: "AdamW"
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  betas: [0.9, 0.999]
+  eps: 1e-8
+  scheduler:
+    name: "CosineAnnealingLR"
+    T_max: 15
+    eta_min: 1e-6
+    warmup_epochs: 2
+
+training:
+  epochs: 15
+  early_stopping_patience: 5
+  gradient_clip_val: 1.0
+  log_every_n_steps: 25
+  val_check_interval: 1.0     # Evaluate every epoch
+
+tasks:
+  heart:
+    task_name: "heart"
+    num_classes: 2
+    classes: ["Normal", "Abnormal"]
+    loss_type: "cross_entropy"
+  lung_acoustic:
+    task_name: "lung_acoustic"
+    num_classes: 4
+    classes: ["Normal", "Crackle", "Wheeze", "Crackle+Wheeze"]
+    loss_type: "cross_entropy"
+  lung_disease:
+    task_name: "lung_disease"
+    num_classes: 3
+    classes: ["Normal", "Asthma", "Other"]
+    loss_type: "cross_entropy"
+    patient_level_aggregation:
+      enabled: true
+      strategy: "soft_voting_mean"  # Average window probabilities per patient

@@ -1,0 +1,464 @@
+[
+  {
+    "model_name": "Random Forest (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 7.0,
+    "window_metrics": {
+      "accuracy": 0.8859,
+      "balanced_accuracy": 0.8747,
+      "precision_macro": 0.8298,
+      "recall_macro": 0.8747,
+      "f1_macro": 0.8482,
+      "precision_weighted": 0.8979,
+      "recall_weighted": 0.8859,
+      "f1_weighted": 0.8895,
+      "confusion_matrix": [
+        [
+          1632,
+          191
+        ],
+        [
+          78,
+          457
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9544,
+          "recall": 0.8952,
+          "f1": 0.9239,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.7052,
+          "recall": 0.8542,
+          "f1": 0.7726,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.8542,
+      "specificity": 0.8952
+    },
+    "patient_metrics": {
+      "accuracy": 0.9207,
+      "balanced_accuracy": 0.9117,
+      "precision_macro": 0.8648,
+      "recall_macro": 0.9117,
+      "f1_macro": 0.8851,
+      "precision_weighted": 0.9288,
+      "recall_weighted": 0.9207,
+      "f1_weighted": 0.9231,
+      "confusion_matrix": [
+        [
+          317,
+          25
+        ],
+        [
+          9,
+          78
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9724,
+          "recall": 0.9269,
+          "f1": 0.9491,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.7573,
+          "recall": 0.8966,
+          "f1": 0.8211,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.8966,
+      "specificity": 0.9269
+    }
+  },
+  {
+    "model_name": "Random Forest (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 2.06,
+    "window_metrics": {
+      "accuracy": 0.8762,
+      "balanced_accuracy": 0.8671,
+      "precision_macro": 0.8174,
+      "recall_macro": 0.8671,
+      "f1_macro": 0.837,
+      "precision_weighted": 0.8913,
+      "recall_weighted": 0.8762,
+      "f1_weighted": 0.8806,
+      "confusion_matrix": [
+        [
+          1611,
+          212
+        ],
+        [
+          80,
+          455
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9527,
+          "recall": 0.8837,
+          "f1": 0.9169,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.6822,
+          "recall": 0.8505,
+          "f1": 0.7571,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.8505,
+      "specificity": 0.8837
+    },
+    "patient_metrics": {
+      "accuracy": 0.9277,
+      "balanced_accuracy": 0.929,
+      "precision_macro": 0.8728,
+      "recall_macro": 0.929,
+      "f1_macro": 0.8964,
+      "precision_weighted": 0.9374,
+      "recall_weighted": 0.9277,
+      "f1_weighted": 0.9303,
+      "confusion_matrix": [
+        [
+          317,
+          25
+        ],
+        [
+          6,
+          81
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9814,
+          "recall": 0.9269,
+          "f1": 0.9534,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.7642,
+          "recall": 0.931,
+          "f1": 0.8394,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.931,
+      "specificity": 0.9269
+    }
+  },
+  {
+    "model_name": "Logistic Regression (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 3.56,
+    "window_metrics": {
+      "accuracy": 0.8588,
+      "balanced_accuracy": 0.873,
+      "precision_macro": 0.7996,
+      "recall_macro": 0.873,
+      "f1_macro": 0.8228,
+      "precision_weighted": 0.8906,
+      "recall_weighted": 0.8588,
+      "f1_weighted": 0.8664,
+      "confusion_matrix": [
+        [
+          1544,
+          279
+        ],
+        [
+          54,
+          481
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9662,
+          "recall": 0.847,
+          "f1": 0.9027,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.6329,
+          "recall": 0.8991,
+          "f1": 0.7429,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.8991,
+      "specificity": 0.847
+    },
+    "patient_metrics": {
+      "accuracy": 0.8974,
+      "balanced_accuracy": 0.9014,
+      "precision_macro": 0.8307,
+      "recall_macro": 0.9014,
+      "f1_macro": 0.8576,
+      "precision_weighted": 0.9162,
+      "recall_weighted": 0.8974,
+      "f1_weighted": 0.9024,
+      "confusion_matrix": [
+        [
+          306,
+          36
+        ],
+        [
+          8,
+          79
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9745,
+          "recall": 0.8947,
+          "f1": 0.9329,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.687,
+          "recall": 0.908,
+          "f1": 0.7822,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.908,
+      "specificity": 0.8947
+    }
+  },
+  {
+    "model_name": "SVM RBF (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 44.23,
+    "window_metrics": {
+      "accuracy": 0.8499,
+      "balanced_accuracy": 0.8752,
+      "precision_macro": 0.7927,
+      "recall_macro": 0.8752,
+      "f1_macro": 0.8155,
+      "precision_weighted": 0.8912,
+      "recall_weighted": 0.8499,
+      "f1_weighted": 0.859,
+      "confusion_matrix": [
+        [
+          1511,
+          312
+        ],
+        [
+          42,
+          493
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.973,
+          "recall": 0.8289,
+          "f1": 0.8951,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.6124,
+          "recall": 0.9215,
+          "f1": 0.7358,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.9215,
+      "specificity": 0.8289
+    },
+    "patient_metrics": {
+      "accuracy": 0.9068,
+      "balanced_accuracy": 0.8515,
+      "precision_macro": 0.8577,
+      "recall_macro": 0.8515,
+      "f1_macro": 0.8546,
+      "precision_weighted": 0.906,
+      "recall_weighted": 0.9068,
+      "f1_weighted": 0.9064,
+      "confusion_matrix": [
+        [
+          323,
+          19
+        ],
+        [
+          21,
+          66
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.939,
+          "recall": 0.9444,
+          "f1": 0.9417,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.7765,
+          "recall": 0.7586,
+          "f1": 0.7674,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.7586,
+      "specificity": 0.9444
+    }
+  },
+  {
+    "model_name": "KNN (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 0.0,
+    "window_metrics": {
+      "accuracy": 0.8601,
+      "balanced_accuracy": 0.7655,
+      "precision_macro": 0.813,
+      "recall_macro": 0.7655,
+      "f1_macro": 0.7849,
+      "precision_weighted": 0.8534,
+      "recall_weighted": 0.8601,
+      "f1_weighted": 0.8543,
+      "confusion_matrix": [
+        [
+          1711,
+          112
+        ],
+        [
+          218,
+          317
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.887,
+          "recall": 0.9386,
+          "f1": 0.912,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.7389,
+          "recall": 0.5925,
+          "f1": 0.6577,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.5925,
+      "specificity": 0.9386
+    },
+    "patient_metrics": {
+      "accuracy": 0.9161,
+      "balanced_accuracy": 0.836,
+      "precision_macro": 0.8933,
+      "recall_macro": 0.836,
+      "f1_macro": 0.8604,
+      "precision_weighted": 0.9135,
+      "recall_weighted": 0.9161,
+      "f1_weighted": 0.9128,
+      "confusion_matrix": [
+        [
+          332,
+          10
+        ],
+        [
+          26,
+          61
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9274,
+          "recall": 0.9708,
+          "f1": 0.9486,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.8592,
+          "recall": 0.7011,
+          "f1": 0.7722,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.7011,
+      "specificity": 0.9708
+    }
+  },
+  {
+    "model_name": "Logistic Regression (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 0.09,
+    "window_metrics": {
+      "accuracy": 0.8151,
+      "balanced_accuracy": 0.8296,
+      "precision_macro": 0.7553,
+      "recall_macro": 0.8296,
+      "f1_macro": 0.774,
+      "precision_weighted": 0.8617,
+      "recall_weighted": 0.8151,
+      "f1_weighted": 0.8266,
+      "confusion_matrix": [
+        [
+          1464,
+          359
+        ],
+        [
+          77,
+          458
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.95,
+          "recall": 0.8031,
+          "f1": 0.8704,
+          "support": 1823
+        },
+        "Abnormal": {
+          "precision": 0.5606,
+          "recall": 0.8561,
+          "f1": 0.6775,
+          "support": 535
+        }
+      },
+      "sensitivity": 0.8561,
+      "specificity": 0.8031
+    },
+    "patient_metrics": {
+      "accuracy": 0.8485,
+      "balanced_accuracy": 0.875,
+      "precision_macro": 0.7778,
+      "recall_macro": 0.875,
+      "f1_macro": 0.8042,
+      "precision_weighted": 0.8956,
+      "recall_weighted": 0.8485,
+      "f1_weighted": 0.8596,
+      "confusion_matrix": [
+        [
+          284,
+          58
+        ],
+        [
+          7,
+          80
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9759,
+          "recall": 0.8304,
+          "f1": 0.8973,
+          "support": 342
+        },
+        "Abnormal": {
+          "precision": 0.5797,
+          "recall": 0.9195,
+          "f1": 0.7111,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.9195,
+      "specificity": 0.8304
+    }
+  }
+]

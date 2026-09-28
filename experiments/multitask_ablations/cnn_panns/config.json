@@ -1,0 +1,27 @@
+{
+  "config_name": "cnn_panns",
+  "use_physical": false,
+  "use_panns": true,
+  "trainable_parameters": 783209,
+  "total_parameters": 808681,
+  "parameter_breakdown": {
+    "shared_trunk": 388320,
+    "physical_branch": 25472,
+    "panns_branch": 262272,
+    "heart_head": 41346,
+    "acoustic_head": 49796,
+    "disease_head": 41475,
+    "total_trainable": 783209,
+    "total": 808681
+  },
+  "training": {
+    "epochs_completed": 5,
+    "best_epoch": 5,
+    "rounds_per_epoch": 50,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "total_train_time_sec": 1133.73
+  }
+}

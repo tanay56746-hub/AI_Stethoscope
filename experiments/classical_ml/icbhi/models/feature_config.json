@@ -1,0 +1,9 @@
+{
+  "dataset": "icbhi",
+  "raw_feature_dim": 397,
+  "pca_dim": 73,
+  "pca_variance_ratio": 0.9509405493736267,
+  "selected_model": "SVM RBF (Scaled)",
+  "selected_representation": "scaled",
+  "timestamp": "2026-09-12 15:29:56"
+}

@@ -1,0 +1,44 @@
+{
+  "status": "completed",
+  "current_configuration": "cnn_physical_panns",
+  "configuration_index": 4,
+  "total_configurations": 4,
+  "current_task": "Validation (All Tasks)",
+  "current_epoch": 6,
+  "total_epochs": 6,
+  "current_batch": 225,
+  "total_batches": 225,
+  "epoch_progress_percent": 100.0,
+  "configuration_progress_percent": 100.0,
+  "overall_progress_percent": 100.0,
+  "train_loss": 0.9283,
+  "validation_loss": 0.9283,
+  "validation_macro_f1": 0.4705,
+  "best_validation_macro_f1": 0.4705,
+  "best_epoch": 6,
+  "elapsed_seconds": 3283,
+  "estimated_remaining_seconds": 0,
+  "last_update": "2026-09-25 13:36:05",
+  "experiments": {
+    "cnn_only": {
+      "status": "completed",
+      "best_val_f1": 0.4109,
+      "test_f1": 0.3716
+    },
+    "cnn_physical": {
+      "status": "completed",
+      "best_val_f1": 0.4456,
+      "test_f1": 0.4144
+    },
+    "cnn_panns": {
+      "status": "completed",
+      "best_val_f1": 0.4247,
+      "test_f1": 0.4104
+    },
+    "cnn_physical_panns": {
+      "status": "completed",
+      "best_val_f1": 0.4705,
+      "test_f1": 0.4862
+    }
+  }
+}

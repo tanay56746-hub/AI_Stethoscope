@@ -1,0 +1,14 @@
+{
+  "dataset": "kaggle",
+  "embedding_type": "panns_cnn14",
+  "embedding_dim": 2048,
+  "selected_model": "Linear SVM",
+  "selected_representation": "scaled",
+  "num_train_samples": 1296,
+  "num_val_samples": 218,
+  "num_test_samples": 288,
+  "num_train_patients": 67,
+  "num_val_patients": 22,
+  "num_test_patients": 23,
+  "timestamp": "2026-09-28 14:58:49"
+}

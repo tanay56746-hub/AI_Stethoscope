@@ -1,0 +1,1034 @@
+[
+  {
+    "model_name": "SVM RBF (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 14.8,
+    "window_metrics": {
+      "accuracy": 0.4087,
+      "balanced_accuracy": 0.3639,
+      "precision_macro": 0.3624,
+      "recall_macro": 0.3639,
+      "f1_macro": 0.3478,
+      "precision_weighted": 0.4667,
+      "recall_weighted": 0.4087,
+      "f1_weighted": 0.4229,
+      "confusion_matrix": [
+        [
+          379,
+          368,
+          46,
+          78
+        ],
+        [
+          129,
+          159,
+          23,
+          29
+        ],
+        [
+          101,
+          36,
+          68,
+          31
+        ],
+        [
+          34,
+          17,
+          24,
+          27
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.5894,
+          "recall": 0.4351,
+          "f1": 0.5007,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2741,
+          "recall": 0.4676,
+          "f1": 0.3457,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.4224,
+          "recall": 0.2881,
+          "f1": 0.3426,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.1636,
+          "recall": 0.2647,
+          "f1": 0.2022,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.7308,
+      "balanced_accuracy": 0.3968,
+      "precision_macro": 0.3561,
+      "recall_macro": 0.3968,
+      "f1_macro": 0.3743,
+      "precision_weighted": 0.6897,
+      "recall_weighted": 0.7308,
+      "f1_weighted": 0.7092,
+      "confusion_matrix": [
+        [
+          18,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8182,
+          "recall": 0.8571,
+          "f1": 0.8372,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.25,
+          "recall": 0.3333,
+          "f1": 0.2857,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "SVM RBF (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 4.82,
+    "window_metrics": {
+      "accuracy": 0.3809,
+      "balanced_accuracy": 0.3448,
+      "precision_macro": 0.3347,
+      "recall_macro": 0.3448,
+      "f1_macro": 0.3205,
+      "precision_weighted": 0.4547,
+      "recall_weighted": 0.3809,
+      "f1_weighted": 0.4009,
+      "confusion_matrix": [
+        [
+          360,
+          368,
+          50,
+          93
+        ],
+        [
+          126,
+          140,
+          30,
+          44
+        ],
+        [
+          89,
+          24,
+          59,
+          64
+        ],
+        [
+          27,
+          15,
+          29,
+          31
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.598,
+          "recall": 0.4133,
+          "f1": 0.4888,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2559,
+          "recall": 0.4118,
+          "f1": 0.3157,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.3512,
+          "recall": 0.25,
+          "f1": 0.2921,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.1336,
+          "recall": 0.3039,
+          "f1": 0.1856,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.7692,
+      "balanced_accuracy": 0.4127,
+      "precision_macro": 0.3865,
+      "recall_macro": 0.4127,
+      "f1_macro": 0.399,
+      "precision_weighted": 0.7057,
+      "recall_weighted": 0.7692,
+      "f1_weighted": 0.736,
+      "confusion_matrix": [
+        [
+          19,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8261,
+          "recall": 0.9048,
+          "f1": 0.8636,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.3333,
+          "recall": 0.3333,
+          "f1": 0.3333,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "Logistic Regression (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 12.77,
+    "window_metrics": {
+      "accuracy": 0.3596,
+      "balanced_accuracy": 0.3394,
+      "precision_macro": 0.3173,
+      "recall_macro": 0.3394,
+      "f1_macro": 0.3107,
+      "precision_weighted": 0.4372,
+      "recall_weighted": 0.3596,
+      "f1_weighted": 0.3728,
+      "confusion_matrix": [
+        [
+          293,
+          376,
+          127,
+          75
+        ],
+        [
+          101,
+          161,
+          48,
+          30
+        ],
+        [
+          83,
+          48,
+          83,
+          22
+        ],
+        [
+          28,
+          25,
+          29,
+          20
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.5802,
+          "recall": 0.3364,
+          "f1": 0.4259,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2639,
+          "recall": 0.4735,
+          "f1": 0.3389,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.2892,
+          "recall": 0.3517,
+          "f1": 0.3174,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.1361,
+          "recall": 0.1961,
+          "f1": 0.1606,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.6154,
+      "balanced_accuracy": 0.5952,
+      "precision_macro": 0.5321,
+      "recall_macro": 0.4464,
+      "f1_macro": 0.4293,
+      "precision_weighted": 0.85,
+      "recall_weighted": 0.6154,
+      "f1_weighted": 0.6868,
+      "confusion_matrix": [
+        [
+          13,
+          8,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9286,
+          "recall": 0.619,
+          "f1": 0.7429,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.2,
+          "recall": 0.6667,
+          "f1": 0.3077,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "Random Forest (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 1.57,
+    "window_metrics": {
+      "accuracy": 0.4358,
+      "balanced_accuracy": 0.2948,
+      "precision_macro": 0.3833,
+      "recall_macro": 0.2948,
+      "f1_macro": 0.2942,
+      "precision_weighted": 0.468,
+      "recall_weighted": 0.4358,
+      "f1_weighted": 0.4237,
+      "confusion_matrix": [
+        [
+          498,
+          330,
+          13,
+          30
+        ],
+        [
+          188,
+          140,
+          1,
+          11
+        ],
+        [
+          145,
+          43,
+          30,
+          18
+        ],
+        [
+          73,
+          17,
+          5,
+          7
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.5509,
+          "recall": 0.5718,
+          "f1": 0.5611,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2642,
+          "recall": 0.4118,
+          "f1": 0.3218,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.6122,
+          "recall": 0.1271,
+          "f1": 0.2105,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.1061,
+          "recall": 0.0686,
+          "f1": 0.0833,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.6923,
+      "balanced_accuracy": 0.381,
+      "precision_macro": 0.3365,
+      "recall_macro": 0.381,
+      "f1_macro": 0.3532,
+      "precision_weighted": 0.6769,
+      "recall_weighted": 0.6923,
+      "f1_weighted": 0.6827,
+      "confusion_matrix": [
+        [
+          17,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8095,
+          "recall": 0.8095,
+          "f1": 0.8095,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "Logistic Regression (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 0.11,
+    "window_metrics": {
+      "accuracy": 0.3138,
+      "balanced_accuracy": 0.323,
+      "precision_macro": 0.3083,
+      "recall_macro": 0.323,
+      "f1_macro": 0.2834,
+      "precision_weighted": 0.451,
+      "recall_weighted": 0.3138,
+      "f1_weighted": 0.3367,
+      "confusion_matrix": [
+        [
+          241,
+          386,
+          132,
+          112
+        ],
+        [
+          72,
+          125,
+          64,
+          79
+        ],
+        [
+          50,
+          39,
+          95,
+          52
+        ],
+        [
+          22,
+          26,
+          29,
+          25
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.626,
+          "recall": 0.2767,
+          "f1": 0.3838,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.217,
+          "recall": 0.3676,
+          "f1": 0.2729,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.2969,
+          "recall": 0.4025,
+          "f1": 0.3417,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0933,
+          "recall": 0.2451,
+          "f1": 0.1351,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.3462,
+      "balanced_accuracy": 0.3889,
+      "precision_macro": 0.2857,
+      "recall_macro": 0.2917,
+      "f1_macro": 0.2217,
+      "precision_weighted": 0.7321,
+      "recall_weighted": 0.3462,
+      "f1_weighted": 0.428,
+      "confusion_matrix": [
+        [
+          7,
+          7,
+          5,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.875,
+          "recall": 0.3333,
+          "f1": 0.4828,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.125,
+          "recall": 0.3333,
+          "f1": 0.1818,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.1429,
+          "recall": 0.5,
+          "f1": 0.2222,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "Random Forest (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 1.03,
+    "window_metrics": {
+      "accuracy": 0.4396,
+      "balanced_accuracy": 0.2845,
+      "precision_macro": 0.4146,
+      "recall_macro": 0.2845,
+      "f1_macro": 0.2782,
+      "precision_weighted": 0.4805,
+      "recall_weighted": 0.4396,
+      "f1_weighted": 0.4159,
+      "confusion_matrix": [
+        [
+          519,
+          330,
+          2,
+          20
+        ],
+        [
+          191,
+          137,
+          4,
+          8
+        ],
+        [
+          176,
+          25,
+          19,
+          16
+        ],
+        [
+          81,
+          14,
+          1,
+          6
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.5367,
+          "recall": 0.5959,
+          "f1": 0.5647,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2708,
+          "recall": 0.4029,
+          "f1": 0.3239,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.7308,
+          "recall": 0.0805,
+          "f1": 0.145,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.12,
+          "recall": 0.0588,
+          "f1": 0.0789,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.6538,
+      "balanced_accuracy": 0.3651,
+      "precision_macro": 0.3222,
+      "recall_macro": 0.3651,
+      "f1_macro": 0.3342,
+      "precision_weighted": 0.6654,
+      "recall_weighted": 0.6538,
+      "f1_weighted": 0.656,
+      "confusion_matrix": [
+        [
+          16,
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8,
+          "recall": 0.7619,
+          "f1": 0.7805,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.1667,
+          "recall": 0.3333,
+          "f1": 0.2222,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "KNN (Scaled)",
+    "feature_representation": "scaled",
+    "training_time_sec": 0.0,
+    "window_metrics": {
+      "accuracy": 0.4054,
+      "balanced_accuracy": 0.2756,
+      "precision_macro": 0.2891,
+      "recall_macro": 0.2756,
+      "f1_macro": 0.2638,
+      "precision_weighted": 0.4051,
+      "recall_weighted": 0.4054,
+      "f1_weighted": 0.3928,
+      "confusion_matrix": [
+        [
+          452,
+          342,
+          38,
+          39
+        ],
+        [
+          176,
+          151,
+          7,
+          6
+        ],
+        [
+          150,
+          55,
+          19,
+          12
+        ],
+        [
+          67,
+          20,
+          9,
+          6
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.5349,
+          "recall": 0.5189,
+          "f1": 0.5268,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2658,
+          "recall": 0.4441,
+          "f1": 0.3326,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.2603,
+          "recall": 0.0805,
+          "f1": 0.123,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0952,
+          "recall": 0.0588,
+          "f1": 0.0727,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.6923,
+      "balanced_accuracy": 0.381,
+      "precision_macro": 0.3365,
+      "recall_macro": 0.381,
+      "f1_macro": 0.3532,
+      "precision_weighted": 0.6769,
+      "recall_weighted": 0.6923,
+      "f1_weighted": 0.6827,
+      "confusion_matrix": [
+        [
+          17,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8095,
+          "recall": 0.8095,
+          "f1": 0.8095,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  },
+  {
+    "model_name": "KNN (PCA)",
+    "feature_representation": "pca",
+    "training_time_sec": 0.0,
+    "window_metrics": {
+      "accuracy": 0.397,
+      "balanced_accuracy": 0.2719,
+      "precision_macro": 0.2883,
+      "recall_macro": 0.2719,
+      "f1_macro": 0.2622,
+      "precision_weighted": 0.4036,
+      "recall_weighted": 0.397,
+      "f1_weighted": 0.388,
+      "confusion_matrix": [
+        [
+          441,
+          342,
+          40,
+          48
+        ],
+        [
+          179,
+          146,
+          6,
+          9
+        ],
+        [
+          146,
+          54,
+          22,
+          14
+        ],
+        [
+          66,
+          21,
+          9,
+          6
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.53,
+          "recall": 0.5063,
+          "f1": 0.5179,
+          "support": 871
+        },
+        "Crackle": {
+          "precision": 0.2593,
+          "recall": 0.4294,
+          "f1": 0.3234,
+          "support": 340
+        },
+        "Wheeze": {
+          "precision": 0.2857,
+          "recall": 0.0932,
+          "f1": 0.1406,
+          "support": 236
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0779,
+          "recall": 0.0588,
+          "f1": 0.067,
+          "support": 102
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.6923,
+      "balanced_accuracy": 0.381,
+      "precision_macro": 0.3365,
+      "recall_macro": 0.381,
+      "f1_macro": 0.3532,
+      "precision_weighted": 0.6769,
+      "recall_weighted": 0.6923,
+      "f1_weighted": 0.6827,
+      "confusion_matrix": [
+        [
+          17,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.8095,
+          "recall": 0.8095,
+          "f1": 0.8095,
+          "support": 21
+        },
+        "Crackle": {
+          "precision": 0.2,
+          "recall": 0.3333,
+          "f1": 0.25,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        }
+      }
+    }
+  }
+]

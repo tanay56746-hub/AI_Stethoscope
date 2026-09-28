@@ -1,0 +1,78 @@
+{
+  "calculation_method": "inverse_frequency (N / (K * count_i))",
+  "source": "Training split index files only",
+  "tasks": {
+    "heart": {
+      "total_train_samples": 19117,
+      "num_classes": 2,
+      "class_counts": {
+        "Normal": 14583,
+        "Abnormal": 4534
+      },
+      "class_weights": {
+        "Normal": 0.65545,
+        "Abnormal": 2.10818
+      },
+      "weights_by_id": {
+        "0": 0.65545,
+        "1": 2.10818
+      },
+      "ordered_tensor_weights": [
+        0.65545,
+        2.10818
+      ]
+    },
+    "lung_acoustic": {
+      "total_train_samples": 3804,
+      "num_classes": 4,
+      "class_counts": {
+        "Normal": 2120,
+        "Crackle": 1044,
+        "Wheeze": 394,
+        "Crackle+Wheeze": 246
+      },
+      "class_weights": {
+        "Normal": 0.44858,
+        "Crackle": 0.91092,
+        "Wheeze": 2.41371,
+        "Crackle+Wheeze": 3.86585
+      },
+      "weights_by_id": {
+        "0": 0.44858,
+        "1": 0.91092,
+        "2": 2.41371,
+        "3": 3.86585
+      },
+      "ordered_tensor_weights": [
+        0.44858,
+        0.91092,
+        2.41371,
+        3.86585
+      ]
+    },
+    "lung_disease": {
+      "total_train_samples": 1296,
+      "num_classes": 3,
+      "class_counts": {
+        "Normal": 417,
+        "Asthma": 339,
+        "Other": 540
+      },
+      "class_weights": {
+        "Normal": 1.03597,
+        "Asthma": 1.27434,
+        "Other": 0.8
+      },
+      "weights_by_id": {
+        "0": 1.03597,
+        "1": 1.27434,
+        "2": 0.8
+      },
+      "ordered_tensor_weights": [
+        1.03597,
+        1.27434,
+        0.8
+      ]
+    }
+  }
+}

@@ -1,0 +1,63 @@
+# Python Bytecode & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Frontend Dependencies
+frontend/node_modules/
+frontend/.pnpm-store/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Datasets (Bulk raw audio files >2.7GB and archives)
+datasets/Heart/Raw/annotations/
+datasets/Heart/Raw/*.zip
+datasets/Heart/Raw/training/training-a/
+datasets/Heart/Raw/training/training-c/
+datasets/Heart/Raw/training/training-d/
+datasets/Heart/Raw/training/training-e/
+datasets/Heart/Raw/training/training-f/
+datasets/Heart/Raw/training/training-b/*
+!datasets/Heart/Raw/training/training-b/b0032.wav
+datasets/lung/
+
+# Processed Audio Caches & Large Feature Arrays (>5GB, files >100MB)
+processed/full/
+processed/panns_embeddings/
+processed/previews/
+processed/classical_features/
+processed/*.csv
+
+# Pretrained Heavy External Weights (>100MB GitHub Limit)
+pretrained_weights/*.pth
+pretrained_weights/*.pt
+!pretrained_weights/README.md
+
+# OS & IDE Caches
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+.gemini/

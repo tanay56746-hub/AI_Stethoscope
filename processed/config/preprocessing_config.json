@@ -1,0 +1,72 @@
+{
+  "description": "AI Stethoscope - Preprocessing Configuration for Multi-Task Backbone",
+  "target_sample_rate": 16000,
+  "acoustic_band": {
+    "f_min": 20,
+    "f_max": 2000,
+    "description": "Preserves clinical cardiac (20-800 Hz) and respiratory (100-2000 Hz) auscultation frequencies"
+  },
+  "high_pass_filter": {
+    "cutoff_hz": 20.0,
+    "order": 4,
+    "filter_type": "butterworth",
+    "description": "Eliminates sub-audible chest contact friction and sensor baseline drift"
+  },
+  "resampling": {
+    "method": "soxr_vhq",
+    "target_sr": 16000,
+    "description": "Band-limited sinc interpolation compatible with pretrained audio foundation backbones"
+  },
+  "amplitude_normalization": {
+    "method": "peak_normalization",
+    "target_peak": 0.95,
+    "description": "Scales maximum absolute amplitude to 0.95 to prevent clipping in 16-bit PCM"
+  },
+  "windowing": {
+    "target_duration_sec": 5.0,
+    "target_samples": 80000,
+    "training_overlap_ratio": 0.50,
+    "padding_strategy": "zero_padding_end",
+    "description": "Fixed 5.0-second input frames (80,000 samples @ 16 kHz)"
+  },
+  "log_mel_spectrogram": {
+    "n_fft": 1024,
+    "hop_length": 256,
+    "n_mels": 128,
+    "f_min": 20,
+    "f_max": 2000,
+    "power": 2.0,
+    "top_db": 80.0,
+    "expected_shape": [128, 313],
+    "description": "128 Mel frequency bands over 313 temporal frames"
+  },
+  "tasks": {
+    "heart": {
+      "task_name": "heart",
+      "labels": {
+        "0": "Normal",
+        "1": "Abnormal"
+      },
+      "manifest_train": "manifests/heart_train.csv"
+    },
+    "lung_acoustic": {
+      "task_name": "lung_acoustic",
+      "labels": {
+        "0": "Normal",
+        "1": "Crackle",
+        "2": "Wheeze",
+        "3": "Crackle+Wheeze"
+      },
+      "manifest_train": "manifests/icbhi_train.csv"
+    },
+    "lung_disease": {
+      "task_name": "lung_disease",
+      "labels": {
+        "0": "Normal",
+        "1": "Asthma",
+        "2": "Other"
+      },
+      "manifest_train": "manifests/kaggle_train.csv"
+    }
+  }
+}

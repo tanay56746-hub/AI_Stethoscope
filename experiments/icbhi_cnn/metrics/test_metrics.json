@@ -1,0 +1,77 @@
+{
+  "loss": 1.4186,
+  "window_metrics": {
+    "accuracy": 0.2382,
+    "balanced_accuracy": 0.2452,
+    "precision_macro": 0.2742,
+    "recall_macro": 0.2452,
+    "f1_macro": 0.2162,
+    "precision_weighted": 0.3586,
+    "recall_weighted": 0.2382,
+    "f1_weighted": 0.2363,
+    "confusion_matrix": [
+      [
+        69,
+        204,
+        253,
+        125
+      ],
+      [
+        31,
+        206,
+        176,
+        67
+      ],
+      [
+        24,
+        88,
+        59,
+        85
+      ],
+      [
+        11,
+        64,
+        49,
+        34
+      ]
+    ]
+  },
+  "patient_metrics": {
+    "accuracy": 0.1667,
+    "balanced_accuracy": 0.2647,
+    "precision_macro": 0.3714,
+    "recall_macro": 0.2647,
+    "f1_macro": 0.1903,
+    "precision_weighted": 0.769,
+    "recall_weighted": 0.1667,
+    "f1_weighted": 0.16,
+    "confusion_matrix": [
+      [
+        1,
+        4,
+        9,
+        3
+      ],
+      [
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "num_windows": 1545,
+  "num_patients": 24
+}

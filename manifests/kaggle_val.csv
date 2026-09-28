@@ -1,0 +1,67 @@
+dataset,task,file_path,patient_id,diagnosis,label,label_id,mode,sound_type,location,age,gender
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP101_Asthma,E W,P L M,12,F.wav",P101,Asthma,Asthma,1,BP,E W,P L M,12,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP101_Asthma,E W,P L M,12,F.wav",P101,Asthma,Asthma,1,DP,E W,P L M,12,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP101_Asthma,E W,P L M,12,F.wav",P101,Asthma,Asthma,1,EP,E W,P L M,12,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP103_N,N,P R U,81,F.wav",P103,N,Normal,0,BP,N,P R U,81,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP103_N,N,P R U,81,F.wav",P103,N,Normal,0,DP,N,P R U,81,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP103_N,N,P R U,81,F.wav",P103,N,Normal,0,EP,N,P R U,81,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP109_N,N,P L M,26,M.wav",P109,N,Normal,0,BP,N,P L M,26,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP109_N,N,P L M,26,M.wav",P109,N,Normal,0,DP,N,P L M,26,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP109_N,N,P L M,26,M.wav",P109,N,Normal,0,EP,N,P L M,26,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP111_COPD,E W,P R L ,51,M.wav",P111,COPD,Other,2,BP,E W,P R L,51,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP111_COPD,E W,P R L ,51,M.wav",P111,COPD,Other,2,DP,E W,P R L,51,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP111_COPD,E W,P R L ,51,M.wav",P111,COPD,Other,2,EP,E W,P R L,51,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP13_Heart Failure,C,P L L,55,M.wav",P13,Heart Failure,Other,2,BP,C,P L L,55,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP13_Heart Failure,C,P L L,55,M.wav",P13,Heart Failure,Other,2,DP,C,P L L,55,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP13_Heart Failure,C,P L L,55,M.wav",P13,Heart Failure,Other,2,EP,C,P L L,55,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP17_COPD,E W,A R M,57,M.wav",P17,COPD,Other,2,BP,E W,A R M,57,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP17_COPD,E W,A R M,57,M.wav",P17,COPD,Other,2,DP,E W,A R M,57,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP17_COPD,E W,A R M,57,M.wav",P17,COPD,Other,2,EP,E W,A R M,57,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP21_BRON,Crep,P R L ,20,M.wav",P21,BRON,Other,2,BP,Crep,P R L,20,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP21_BRON,Crep,P R L ,20,M.wav",P21,BRON,Other,2,DP,Crep,P R L,20,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP21_BRON,Crep,P R L ,20,M.wav",P21,BRON,Other,2,EP,Crep,P R L,20,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP22_BRON,Crep,P R U,24,M.wav",P22,BRON,Other,2,BP,Crep,P R U,24,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP22_BRON,Crep,P R U,24,M.wav",P22,BRON,Other,2,DP,Crep,P R U,24,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP22_BRON,Crep,P R U,24,M.wav",P22,BRON,Other,2,EP,Crep,P R U,24,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP24_heart failure,Crep,P R L ,76,F.wav",P24,heart failure,Other,2,BP,Crep,P R L,76,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP24_heart failure,Crep,P R L ,76,F.wav",P24,heart failure,Other,2,DP,Crep,P R L,76,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP24_heart failure,Crep,P R L ,76,F.wav",P24,heart failure,Other,2,EP,Crep,P R L,76,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP33_Asthma,E W,P R M,43,F.wav",P33,Asthma,Asthma,1,BP,E W,P R M,43,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP33_Asthma,E W,P R M,43,F.wav",P33,Asthma,Asthma,1,DP,E W,P R M,43,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP33_Asthma,E W,P R M,43,F.wav",P33,Asthma,Asthma,1,EP,E W,P R M,43,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP35_Asthma,E W,A R L,38,M.wav",P35,Asthma,Asthma,1,BP,E W,A R L,38,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP35_Asthma,E W,A R L,38,M.wav",P35,Asthma,Asthma,1,DP,E W,A R L,38,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP35_Asthma,E W,A R L,38,M.wav",P35,Asthma,Asthma,1,EP,E W,A R L,38,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP55_asthma,E W,P R U,72,F.wav",P55,asthma,Asthma,1,BP,E W,P R U,72,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP55_asthma,E W,P R U,72,F.wav",P55,asthma,Asthma,1,DP,E W,P R U,72,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP55_asthma,E W,P R U,72,F.wav",P55,asthma,Asthma,1,EP,E W,P R U,72,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP63_COPD,E W,P R L ,58,F.wav",P63,COPD,Other,2,BP,E W,P R L,58,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP63_COPD,E W,P R L ,58,F.wav",P63,COPD,Other,2,DP,E W,P R L,58,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP63_COPD,E W,P R L ,58,F.wav",P63,COPD,Other,2,EP,E W,P R L,58,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP69_pneumonia,Bronchial,P R L ,64,M.wav",P69,pneumonia,Other,2,BP,Bronchial,P R L,64,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP69_pneumonia,Bronchial,P R L ,64,M.wav",P69,pneumonia,Other,2,DP,Bronchial,P R L,64,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP69_pneumonia,Bronchial,P R L ,64,M.wav",P69,pneumonia,Other,2,EP,Bronchial,P R L,64,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP71_N,N,P R U,36,M.wav",P71,N,Normal,0,BP,N,P R U,36,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP71_N,N,P R U,36,M.wav",P71,N,Normal,0,DP,N,P R U,36,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP71_N,N,P R U,36,M.wav",P71,N,Normal,0,EP,N,P R U,36,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP76_N,N,A L U,31,M.wav",P76,N,Normal,0,BP,N,A L U,31,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP76_N,N,A L U,31,M.wav",P76,N,Normal,0,DP,N,A L U,31,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP76_N,N,A L U,31,M.wav",P76,N,Normal,0,EP,N,A L U,31,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP77_Asthma,E W,A R L,40,M.wav",P77,Asthma,Asthma,1,BP,E W,A R L,40,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP77_Asthma,E W,A R L,40,M.wav",P77,Asthma,Asthma,1,DP,E W,A R L,40,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP77_Asthma,E W,A R L,40,M.wav",P77,Asthma,Asthma,1,EP,E W,A R L,40,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP83_N,N,A R U,18,F.wav",P83,N,Normal,0,BP,N,A R U,18,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP83_N,N,A R U,18,F.wav",P83,N,Normal,0,DP,N,A R U,18,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP83_N,N,A R U,18,F.wav",P83,N,Normal,0,EP,N,A R U,18,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP90_heart failure,Crep,P L M,74,F.wav",P90,heart failure,Other,2,BP,Crep,P L M,74,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP90_heart failure,Crep,P L M,74,F.wav",P90,heart failure,Other,2,DP,Crep,P L M,74,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP90_heart failure,Crep,P L M,74,F.wav",P90,heart failure,Other,2,EP,Crep,P L M,74,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP92_N,N,P L L ,43,M.wav",P92,N,Normal,0,BP,N,P L L,43,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP92_N,N,P L L ,43,M.wav",P92,N,Normal,0,DP,N,P L L,43,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP92_N,N,P L L ,43,M.wav",P92,N,Normal,0,EP,N,P L L,43,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP96_N,N,P R L ,66,F.wav",P96,N,Normal,0,BP,N,P R L,66,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP96_N,N,P R L ,66,F.wav",P96,N,Normal,0,DP,N,P R L,66,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP96_N,N,P R L ,66,F.wav",P96,N,Normal,0,EP,N,P R L,66,F
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/BP97_Asthma,E W,P R U,24,M.wav",P97,Asthma,Asthma,1,BP,E W,P R U,24,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/DP97_Asthma,E W,P R U,24,M.wav",P97,Asthma,Asthma,1,DP,E W,P R U,24,M
+kaggle_lung,lung_disease,"datasets/lung/Kaggle_Lung/archive/Audio Files/EP97_Asthma,E W,P R U,24,M.wav",P97,Asthma,Asthma,1,EP,E W,P R U,24,M

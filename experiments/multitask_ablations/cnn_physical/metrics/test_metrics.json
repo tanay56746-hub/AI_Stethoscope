@@ -1,0 +1,313 @@
+{
+  "config_name": "cnn_physical",
+  "best_epoch": 5,
+  "training_time_sec": 1141.45,
+  "trainable_parameters": 546409,
+  "total_parameters": 808681,
+  "test_macro_f1_mean": 0.4144,
+  "heart": {
+    "task": "heart",
+    "window_metrics": {
+      "accuracy": 0.7998,
+      "balanced_accuracy": 0.7654,
+      "precision_macro": 0.7252,
+      "recall_macro": 0.7654,
+      "f1_macro": 0.7395,
+      "precision_weighted": 0.8231,
+      "recall_weighted": 0.7998,
+      "f1_weighted": 0.8079,
+      "confusion_matrix": [
+        [
+          1554,
+          322
+        ],
+        [
+          164,
+          387
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9045,
+          "recall": 0.8284,
+          "f1": 0.8648,
+          "support": 1876
+        },
+        "Abnormal": {
+          "precision": 0.5458,
+          "recall": 0.7024,
+          "f1": 0.6143,
+          "support": 551
+        }
+      },
+      "sensitivity": 0.7024,
+      "specificity": 0.8284
+    },
+    "patient_metrics": {
+      "accuracy": 0.8337,
+      "balanced_accuracy": 0.8015,
+      "precision_macro": 0.7499,
+      "recall_macro": 0.8015,
+      "f1_macro": 0.769,
+      "precision_weighted": 0.8565,
+      "recall_weighted": 0.8337,
+      "f1_weighted": 0.8415,
+      "confusion_matrix": [
+        [
+          291,
+          49
+        ],
+        [
+          22,
+          65
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.9297,
+          "recall": 0.8559,
+          "f1": 0.8913,
+          "support": 340
+        },
+        "Abnormal": {
+          "precision": 0.5702,
+          "recall": 0.7471,
+          "f1": 0.6468,
+          "support": 87
+        }
+      },
+      "sensitivity": 0.7471,
+      "specificity": 0.8559
+    },
+    "num_windows": 2427,
+    "num_patients": 427
+  },
+  "icbhi": {
+    "task": "icbhi",
+    "window_metrics": {
+      "accuracy": 0.2447,
+      "balanced_accuracy": 0.2199,
+      "precision_macro": 0.2326,
+      "recall_macro": 0.2199,
+      "f1_macro": 0.1635,
+      "precision_weighted": 0.3095,
+      "recall_weighted": 0.2447,
+      "f1_weighted": 0.185,
+      "confusion_matrix": [
+        [
+          25,
+          363,
+          247,
+          16
+        ],
+        [
+          18,
+          299,
+          153,
+          10
+        ],
+        [
+          7,
+          182,
+          51,
+          16
+        ],
+        [
+          6,
+          111,
+          38,
+          3
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.4464,
+          "recall": 0.0384,
+          "f1": 0.0707,
+          "support": 651
+        },
+        "Crackle": {
+          "precision": 0.3131,
+          "recall": 0.6229,
+          "f1": 0.4167,
+          "support": 480
+        },
+        "Wheeze": {
+          "precision": 0.1043,
+          "recall": 0.1992,
+          "f1": 0.1369,
+          "support": 256
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0667,
+          "recall": 0.019,
+          "f1": 0.0296,
+          "support": 158
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.4167,
+      "precision_macro": 0.0612,
+      "recall_macro": 0.4167,
+      "f1_macro": 0.1042,
+      "precision_weighted": 0.023,
+      "recall_weighted": 0.125,
+      "f1_weighted": 0.0382,
+      "confusion_matrix": [
+        [
+          0,
+          9,
+          8,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          0
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 17
+        },
+        "Crackle": {
+          "precision": 0.1538,
+          "recall": 0.6667,
+          "f1": 0.25,
+          "support": 3
+        },
+        "Wheeze": {
+          "precision": 0.0909,
+          "recall": 1.0,
+          "f1": 0.1667,
+          "support": 1
+        },
+        "Crackle+Wheeze": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        }
+      }
+    },
+    "num_windows": 1545,
+    "num_patients": 24
+  },
+  "kaggle": {
+    "task": "kaggle",
+    "window_metrics": {
+      "accuracy": 0.3611,
+      "balanced_accuracy": 0.3769,
+      "precision_macro": 0.3557,
+      "recall_macro": 0.3769,
+      "f1_macro": 0.3401,
+      "precision_weighted": 0.3531,
+      "recall_weighted": 0.3611,
+      "f1_weighted": 0.3291,
+      "confusion_matrix": [
+        [
+          41,
+          31,
+          15
+        ],
+        [
+          32,
+          51,
+          10
+        ],
+        [
+          30,
+          66,
+          12
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.3981,
+          "recall": 0.4713,
+          "f1": 0.4316,
+          "support": 87
+        },
+        "Asthma": {
+          "precision": 0.3446,
+          "recall": 0.5484,
+          "f1": 0.4232,
+          "support": 93
+        },
+        "Other": {
+          "precision": 0.3243,
+          "recall": 0.1111,
+          "f1": 0.1655,
+          "support": 108
+        }
+      }
+    },
+    "patient_metrics": {
+      "accuracy": 0.5217,
+      "balanced_accuracy": 0.5397,
+      "precision_macro": 0.6004,
+      "recall_macro": 0.5397,
+      "f1_macro": 0.5256,
+      "precision_weighted": 0.6134,
+      "recall_weighted": 0.5217,
+      "f1_weighted": 0.5201,
+      "confusion_matrix": [
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          3
+        ]
+      ],
+      "per_class": {
+        "Normal": {
+          "precision": 0.6667,
+          "recall": 0.5714,
+          "f1": 0.6154,
+          "support": 7
+        },
+        "Asthma": {
+          "precision": 0.3846,
+          "recall": 0.7143,
+          "f1": 0.5,
+          "support": 7
+        },
+        "Other": {
+          "precision": 0.75,
+          "recall": 0.3333,
+          "f1": 0.4615,
+          "support": 9
+        }
+      }
+    },
+    "num_windows": 288,
+    "num_patients": 23
+  }
+}
