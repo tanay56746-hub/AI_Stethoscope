@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — TRAINING] | File: scripts/train_panns_classifiers.py
+# Purpose: Trains Classifier Heads on Frozen 2048-D PANNs AudioSet Embeddings
+# ==============================================================================
 """
 AI Stethoscope - PANNs CNN14 Frozen Embeddings Classifier Benchmark
 ===================================================================

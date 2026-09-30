@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: VERCEL SERVERLESS BRIDGE] | File: api/status.js
+// Purpose: Cloud Serverless Model Status & Specs Endpoint (/api/status)
+// =============================================================================
 export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');

@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML LOSS FUNCTIONS] | File: src/losses/multitask_loss.py
+# Purpose: Uncertainty-Weighted & Focal Multi-Task Loss Functions
+# ==============================================================================
 """
 AI Stethoscope - Masked Multi-Task Cross-Entropy Loss
 =====================================================

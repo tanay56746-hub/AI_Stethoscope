@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML MODEL ARCHITECTURE] | File: src/models/cnn_baseline.py
+# Purpose: 2D Log-Mel Convolutional Neural Network Baseline Architecture
+# ==============================================================================
 """
 AI Stethoscope - Custom CNN Baseline Architecture
 ==================================================

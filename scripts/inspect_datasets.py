@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — DATASET INSPECTION] | File: scripts/inspect_datasets.py
+# Purpose: Initial Raw Corpus Discovery & Metadata Summary
+# ==============================================================================
 """
 AI Stethoscope - Dataset Inspection Utility
 =============================================

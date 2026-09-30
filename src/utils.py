@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML UTILITIES] | File: src/utils.py
+# Purpose: Reproducibility Seeds, Device Selection, Logging & Config Helpers
+# ==============================================================================
 """
 AI Stethoscope - Training Utilities & Class Weights Calculation
 ================================================================

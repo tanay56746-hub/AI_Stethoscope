@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: VERCEL SERVERLESS BRIDGE] | File: api/predict.js
+// Purpose: Cloud Serverless API Bridge (/api/predict) with External Backend Proxy
+// =============================================================================
 import b0032Data from './b0032_result.json';
 
 export default async function handler(req, res) {

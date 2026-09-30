@@ -92,16 +92,21 @@ AI_Stethoscope/
 ├── manifests/                    # Training and test split CSV manifests
 ├── pretrained_weights/           # PANNs CNN14 download instructions (README.md)
 ├── processed/config/             # Official preprocessing configuration JSON
-├── scripts/
-│   ├── demo_server.py            # Zero-dependency Python HTTP API server
+├── backend/                      # Python runtime, API server, and inference pipeline
+│   ├── demo_server.py            # Zero-dependency Python HTTP API server (Port 8000)
 │   ├── inference_engine.py       # Cached inference engine with visualization data
-│   ├── predict_audio.py          # Offline WAV command-line inference script
-│   ├── preprocess_audio.py       # AudioPreprocessor (16 kHz, filter, 5s, log-mel)
-│   └── test_panns_cnn14.py       # PANNs CNN14 backbone definition
-└── src/
-    ├── features/                 # Handcrafted physical acoustic feature extraction
-    ├── losses/                   # Multi-task loss formulations
-    └── models/                   # FinalMultiTaskStethoscopeModel architecture
+│   ├── manage.py                 # CLI server launcher (`python manage.py runserver`)
+│   └── predict_audio.py          # Offline WAV command-line inference script
+├── src/                          # Core ML architectures, features, datasets & training
+│   ├── features/
+│   │   ├── audio_features.py     # 397-D handcrafted physical acoustic feature extraction
+│   │   └── preprocessor.py       # AudioPreprocessor (16 kHz, 20 Hz HP filter, 5s, log-mel)
+│   ├── losses/                   # Multi-task loss formulations
+│   └── models/
+│       ├── cnn_baseline.py       # Single-task 2D CNN baseline architecture
+│       ├── final_multitask_model.py # FinalMultiTaskStethoscopeModel architecture
+│       └── panns_cnn14.py        # Frozen PANNs CNN14 AudioSet backbone (2048-D)
+└── scripts/                      # Offline research, training, extraction & test utilities
 ```
 
 ---
@@ -132,7 +137,7 @@ Download the official pretrained weights (`Cnn14_mAP=0.431.pth`, ~312 MB) from Z
 Run offline prediction on any standard WAV audio file:
 
 ```bash
-python scripts/predict_audio.py --audio "datasets/Heart/Raw/training/training-b/b0032.wav"
+python backend/predict_audio.py --audio "datasets/Heart/Raw/training/training-b/b0032.wav"
 ```
 
 **Example Terminal Output:**
@@ -175,7 +180,7 @@ Probabilities:
 Start the Python demonstration server (automatically serves the built frontend from `frontend/dist`):
 
 ```bash
-python scripts/demo_server.py --port 8000
+python backend/demo_server.py --port 8000
 ```
 
 Open your browser at:
@@ -188,7 +193,7 @@ To develop or customize React components with hot-module replacement:
 
 1. Start the API server:
    ```bash
-   python scripts/demo_server.py --port 8000
+   python backend/demo_server.py --port 8000
    ```
 2. In a separate terminal, launch the Vite dev server:
    ```bash

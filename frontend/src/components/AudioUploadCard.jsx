@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND COMPONENT] | File: frontend/src/components/AudioUploadCard.jsx
+// Purpose: WAV Audio Drag-and-Drop Upload & Preloaded Sample Selector
+// =============================================================================
 import React, { useState, useRef } from 'react';
 
 /**

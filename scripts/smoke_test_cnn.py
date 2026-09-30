@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — SMOKE TEST] | File: scripts/smoke_test_cnn.py
+# Purpose: Quick Forward/Backward Sanity Check for 2D CNN Baseline
+# ==============================================================================
 """
 AI Stethoscope - Stage 5B: CNN Baseline Smoke Test
 ===================================================

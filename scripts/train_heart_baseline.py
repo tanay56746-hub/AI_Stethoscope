@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — TRAINING] | File: scripts/train_heart_baseline.py
+# Purpose: Trains PhysioNet 2016 Heart Sound Classification Baseline
+# ==============================================================================
 """
 AI Stethoscope - Step 2: Heart CNN Baseline Training
 ===================================================

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — MONITORING] | File: scripts/training_dashboard.py
+# Purpose: CLI Training Progress Monitor & Metric Summary Utility
+# ==============================================================================
 """
 AI Stethoscope - Live Terminal Training Dashboard
 =================================================

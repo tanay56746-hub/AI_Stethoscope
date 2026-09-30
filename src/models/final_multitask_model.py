@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML MODEL ARCHITECTURE] | File: src/models/final_multitask_model.py
+# Purpose: Verified Tri-Modal Shared Multi-Task Stethoscope Network (CNN + Phys + PANNs)
+# ==============================================================================
 """
 AI Stethoscope - Final Multi-Task Architecture
 ==============================================

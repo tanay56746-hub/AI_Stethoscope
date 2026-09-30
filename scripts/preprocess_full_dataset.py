@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — BATCH PREPROCESSING] | File: scripts/preprocess_full_dataset.py
+# Purpose: Full Dataset 16 kHz Filtering, Windowing & Log-Mel Tensor Generation
+# ==============================================================================
 """
 AI Stethoscope - Full Dataset Preprocessing & Caching
 ======================================================

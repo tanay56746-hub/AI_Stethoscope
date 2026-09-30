@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — TRAINING] | File: scripts/train_classical_ml.py
+# Purpose: Trains Classical ML Baselines (Random Forest, SVM, MLP, XGBoost)
+# ==============================================================================
 """
 AI Stethoscope - Classical Machine Learning Benchmark Runner
 ============================================================

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — DATASET AUDIT] | File: scripts/dataset_audit.py
+# Purpose: Audits Raw Dataset File Counts, Durations, Sample Rates & Labels
+# ==============================================================================
 """
 AI Stethoscope - Deep Dataset Audit & Verification Utility
 ===========================================================

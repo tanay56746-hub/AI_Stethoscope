@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — PREPROCESSING PREVIEW] | File: scripts/preprocess_audio.py
+# Purpose: AudioPreprocessor Validation & Diagnostic Spectrogram Preview Generator
+# ==============================================================================
 """
 AI Stethoscope - Audio Preprocessing Pipeline & Preview Generator
 ===================================================================

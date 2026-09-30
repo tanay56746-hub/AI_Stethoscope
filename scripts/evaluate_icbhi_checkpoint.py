@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — EVALUATION] | File: scripts/evaluate_icbhi_checkpoint.py
+# Purpose: Evaluates Trained Checkpoints on Official ICBHI 2017 Metrics
+# ==============================================================================
 """
 AI Stethoscope - Step 1: ICBHI Checkpoint Evaluation
 ===================================================

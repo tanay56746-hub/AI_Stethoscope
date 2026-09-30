@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — DATA MANIFESTS] | File: scripts/create_manifests.py
+# Purpose: Generates Patient-Disjoint Train/Val/Test Split CSV Manifests
+# ==============================================================================
 """
 AI Stethoscope - Dataset Manifest Generation
 ==============================================

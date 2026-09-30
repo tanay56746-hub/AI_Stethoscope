@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: BACKEND INFERENCE CLI] | File: backend/predict_audio.py
+# Purpose: End-to-End Offline WAV Audio Inference Pipeline (CNN + Phys + PANNs)
+# ==============================================================================
 """
 AI Stethoscope - Offline WAV Audio Inference Pipeline
 ======================================================
@@ -6,9 +10,10 @@ Executes end-to-end inference for a single input WAV file using the verified
 final multi-task model (CNN + Physical Features + PANNs Embeddings).
 
 Usage:
-    python scripts/predict_audio.py --audio <path_to_wav>
+    python backend/predict_audio.py --audio <path_to_wav>
 """
 
+import os
 import sys
 import argparse
 from pathlib import Path
@@ -22,22 +27,38 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.preprocess_audio import AudioPreprocessor
+from backend import load_env_file
+from src.features.preprocessor import AudioPreprocessor
 from src.features.audio_features import extract_audio_features
-from scripts.test_panns_cnn14 import Cnn14
+from src.models.panns_cnn14 import Cnn14
 from src.models.final_multitask_model import FinalMultiTaskStethoscopeModel
 
-DEFAULT_CHECKPOINT = (
-    PROJECT_ROOT
-    / "experiments"
-    / "multitask_ablations"
-    / "cnn_physical_panns"
-    / "checkpoints"
-    / "best_checkpoint.pt"
+load_env_file()
+
+DEFAULT_CHECKPOINT = Path(
+    os.environ.get(
+        "MODEL_CHECKPOINT_PATH",
+        str(
+            PROJECT_ROOT
+            / "experiments"
+            / "multitask_ablations"
+            / "cnn_physical_panns"
+            / "checkpoints"
+            / "best_checkpoint.pt"
+        ),
+    )
 )
-DEFAULT_PANNS_WEIGHTS = (
-    PROJECT_ROOT / "pretrained_weights" / "Cnn14_mAP=0.431.pth"
+if not DEFAULT_CHECKPOINT.is_absolute():
+    DEFAULT_CHECKPOINT = PROJECT_ROOT / DEFAULT_CHECKPOINT
+
+DEFAULT_PANNS_WEIGHTS = Path(
+    os.environ.get(
+        "PANNS_WEIGHTS_PATH",
+        str(PROJECT_ROOT / "pretrained_weights" / "Cnn14_mAP=0.431.pth"),
+    )
 )
+if not DEFAULT_PANNS_WEIGHTS.is_absolute():
+    DEFAULT_PANNS_WEIGHTS = PROJECT_ROOT / DEFAULT_PANNS_WEIGHTS
 
 # Task class labels
 HEART_CLASSES = ["Normal", "Abnormal"]

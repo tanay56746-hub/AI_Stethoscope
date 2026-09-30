@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — AUDIO ANALYSIS] | File: scripts/analyze_audio.py
+# Purpose: Read-Only Spectral, PSD & Clinical Frequency Band Analysis
+# ==============================================================================
 """
 AI Stethoscope - Audio Analysis & Spectral Exploration
 ========================================================

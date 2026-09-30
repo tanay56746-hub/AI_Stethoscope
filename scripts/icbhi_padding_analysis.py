@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — PREPROCESSING STUDY] | File: scripts/icbhi_padding_analysis.py
+# Purpose: Analyzes Respiratory Cycle Durations & 5.0s Padding Trade-Offs
+# ==============================================================================
 """
 AI Stethoscope - Targeted ICBHI Padding Analysis
 =================================================

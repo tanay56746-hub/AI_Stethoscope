@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML TEMPORAL POOLING] | File: src/pooling.py
+# Purpose: Attentive & Statistical Temporal Pooling Layers for Audio Sequences
+# ==============================================================================
 """
 AI Stethoscope - Masked Temporal Average Pooling Utilities
 ===========================================================

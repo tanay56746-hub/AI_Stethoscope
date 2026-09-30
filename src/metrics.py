@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML EVALUATION METRICS] | File: src/metrics.py
+# Purpose: Sensitivity, Specificity, ICBHI Score, Macro-F1 & Confusion Matrix Metrics
+# ==============================================================================
 """
 AI Stethoscope - Classification Metrics & Patient-Level Aggregation
 ====================================================================

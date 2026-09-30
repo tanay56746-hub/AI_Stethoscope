@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: BACKEND API SERVER] | File: backend/demo_server.py
+# Purpose: HTTP REST API Server (Port 8000) connecting Frontend UI to ML Backend
+# ==============================================================================
 """
 AI Stethoscope - Demonstration API Server
 =========================================
@@ -12,7 +16,7 @@ Endpoints:
   GET  /                - Serves frontend build if available (frontend/dist)
 
 Usage:
-  python scripts/demo_server.py [--port 8000]
+  python backend/demo_server.py [--port 8000]
 """
 
 import sys
@@ -28,7 +32,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.inference_engine import StethoscopeInferenceEngine
+from backend.inference_engine import StethoscopeInferenceEngine
 
 # Demo samples for one-click professor testing
 SAMPLE_AUDIOS = [
@@ -49,9 +53,10 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(self.frontend_dist if self.frontend_dist.exists() else PROJECT_ROOT), **kwargs)
 
     def end_headers(self):
-        self.send_header("Access-Control-Allow-Origin", "*")
+        cors_origin = os.environ.get("CORS_ALLOWED_ORIGINS", "*")
+        self.send_header("Access-Control-Allow-Origin", cors_origin)
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
-        self.send_header("Access-Control-Allow-Headers", "Content-Type, Accept")
+        self.send_header("Access-Control-Allow-Headers", "Content-Type, Accept, Authorization")
         self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
         super().end_headers()
 
@@ -312,8 +317,10 @@ def run_server(port: int = 8000, host: str = "127.0.0.1"):
 
 
 if __name__ == "__main__":
+    default_port = int(os.environ.get("PORT", os.environ.get("BACKEND_PORT", "8000")))
+    default_host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "127.0.0.1")
     parser = argparse.ArgumentParser(description="AI Stethoscope Demonstration Server")
-    parser.add_argument("--port", type=int, default=8000, help="Server port (default: 8000)")
-    parser.add_argument("--host", type=str, default="127.0.0.1", help="Host address (default: 127.0.0.1)")
+    parser.add_argument("--port", type=int, default=default_port, help=f"Server port (default: {default_port})")
+    parser.add_argument("--host", type=str, default=default_host, help=f"Host address (default: {default_host})")
     args = parser.parse_args()
     run_server(port=args.port, host=args.host)

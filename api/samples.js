@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: VERCEL SERVERLESS BRIDGE] | File: api/samples.js
+// Purpose: Cloud Serverless Sample Audio Metadata Endpoint (/api/samples)
+// =============================================================================
 export default function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');

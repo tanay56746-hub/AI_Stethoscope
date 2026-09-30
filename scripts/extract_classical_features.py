@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — FEATURE EXTRACTION] | File: scripts/extract_classical_features.py
+# Purpose: Batch Extracts 397-D Physical Acoustic Features for Full Dataset
+# ==============================================================================
 """
 AI Stethoscope - Batch Feature Extraction for Classical ML
 ==========================================================

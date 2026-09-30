@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML TRAINER ENGINE] | File: src/trainer.py
+# Purpose: Multi-Task & Single-Task PyTorch Training Loop, Checkpointing & Early Stopping
+# ==============================================================================
 """
 AI Stethoscope - Model Training & Evaluation Engine
 ===================================================

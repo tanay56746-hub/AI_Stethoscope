@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND COMPONENT] | File: frontend/src/components/ResultCards.jsx
+// Purpose: Three-Task Probability Cards (Heart Sound, Lung Acoustic, Lung Disease)
+// =============================================================================
 import React from 'react';
 
 /**

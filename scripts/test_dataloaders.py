@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — UNIT TEST] | File: scripts/test_dataloaders.py
+# Purpose: Verifies PyTorch DataLoader Batch Shapes, Masks & Sampling Weights
+# ==============================================================================
 """
 AI Stethoscope - Batch Sanity Test & Training Infrastructure Verification
 ==========================================================================

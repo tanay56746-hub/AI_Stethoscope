@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — TRAINING] | File: scripts/train_multitask_ablations.py
+# Purpose: Trains All Multi-Task Ablation Architectures & Saves Best Checkpoints
+# ==============================================================================
 """
 AI Stethoscope - Controlled Multi-Task Architecture Ablation Experiments
 ========================================================================

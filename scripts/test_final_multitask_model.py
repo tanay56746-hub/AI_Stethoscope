@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — MODEL TEST] | File: scripts/test_final_multitask_model.py
+# Purpose: Verifies FinalMultiTaskStethoscopeModel Forward Pass & Parameter Count
+# ==============================================================================
 """
 AI Stethoscope - Final Multi-Task Architecture Smoke Tests
 ==========================================================

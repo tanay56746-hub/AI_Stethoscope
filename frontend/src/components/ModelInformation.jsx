@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND COMPONENT] | File: frontend/src/components/ModelInformation.jsx
+// Purpose: Collapsible Multi-Task Model Architecture & Technical Specs Table
+// =============================================================================
 import React, { useState } from 'react';
 
 /**

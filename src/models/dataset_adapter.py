@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML MODEL ARCHITECTURE] | File: src/models/dataset_adapter.py
+# Purpose: Dataset-Specific Input Stem & Feature Adapter Layers
+# ==============================================================================
 """
 AI Stethoscope - Multi-Task Dataset Compatibility Adapter
 ==========================================================

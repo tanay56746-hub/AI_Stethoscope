@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: BACKEND INFERENCE ENGINE] | File: backend/inference_engine.py
+# Purpose: Singleton Cached Inference Engine & Waveform/Spectrogram Generator
+# ==============================================================================
 """
 AI Stethoscope - Inference Engine for Demo API
 ==============================================
-Wraps the offline inference pipeline from `scripts.predict_audio` with model
+Wraps the offline inference pipeline from `backend.predict_audio` with model
 caching and rich visualization data (downsampled waveform and log-mel matrix)
 for real-time web UI demonstration.
 """
@@ -20,9 +24,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from scripts.preprocess_audio import AudioPreprocessor
+from src.features.preprocessor import AudioPreprocessor
 from src.features.audio_features import extract_audio_features
-from scripts.predict_audio import (
+from backend.predict_audio import (
     DEFAULT_CHECKPOINT,
     DEFAULT_PANNS_WEIGHTS,
     HEART_CLASSES,

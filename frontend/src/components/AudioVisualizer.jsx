@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND COMPONENT] | File: frontend/src/components/AudioVisualizer.jsx
+// Purpose: HTML5 Canvas Time-Domain Waveform & Log-Mel Spectrogram Renderer
+// =============================================================================
 import React, { useEffect, useRef } from 'react';
 
 /**

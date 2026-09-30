@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — SMOKE TEST] | File: scripts/smoke_test_classical_ml.py
+# Purpose: Quick Sanity Check for Classical ML Feature Pipeline
+# ==============================================================================
 """
 AI Stethoscope - Classical ML Pipeline Smoke Test
 =================================================

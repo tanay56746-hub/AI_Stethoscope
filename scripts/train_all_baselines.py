@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — TRAINING] | File: scripts/train_all_baselines.py
+# Purpose: Trains Single-Task 2D CNN Baselines Across Heart & Lung Datasets
+# ==============================================================================
 """
 AI Stethoscope - Stage 5B: Full CNN Baseline Training
 ======================================================

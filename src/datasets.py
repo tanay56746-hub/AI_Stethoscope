@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML DATASETS] | File: src/datasets.py
+# Purpose: PyTorch Dataset Loaders for PhysioNet Heart, ICBHI Lung, and Kaggle Lung
+# ==============================================================================
 """
 AI Stethoscope - PyTorch Dataset Classes & DataLoader Utilities
 ================================================================

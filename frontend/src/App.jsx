@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND DASHBOARD] | File: frontend/src/App.jsx
+// Purpose: Main Clinical Demonstration Dashboard & Backend API Integration
+// =============================================================================
 import React, { useState, useEffect } from 'react';
 import AudioUploadCard from './components/AudioUploadCard';
 import ResultCards from './components/ResultCards';

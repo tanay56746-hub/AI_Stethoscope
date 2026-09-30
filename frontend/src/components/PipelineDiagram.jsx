@@ -1,3 +1,7 @@
+// =============================================================================
+// [LAYER: FRONTEND COMPONENT] | File: frontend/src/components/PipelineDiagram.jsx
+// Purpose: 7-Stage Acoustic Signal Processing & Neural Network Pipeline Diagram
+// =============================================================================
 import React from 'react';
 
 /**

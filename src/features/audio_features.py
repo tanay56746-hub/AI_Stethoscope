@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML FEATURE EXTRACTION] | File: src/features/audio_features.py
+# Purpose: 397-Dimensional Handcrafted Physical Acoustic Feature Extractor
+# ==============================================================================
 """
 AI Stethoscope - Acoustic Feature Extraction Module
 ===================================================

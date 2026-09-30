@@ -1,3 +1,7 @@
+# ==============================================================================
+# [LAYER: ML LOSS FUNCTIONS] | File: src/losses/__init__.py
+# Purpose: Exports Multi-Task & Class-Balanced Loss Formulations
+# ==============================================================================
 """
 AI Stethoscope - Losses Package
 ===============================

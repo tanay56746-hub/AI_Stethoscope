@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — BACKBONE TEST] | File: scripts/test_panns_cnn14.py
+# Purpose: Verifies Official PANNs CNN14 Weights & 2048-D Embedding Extraction
+# ==============================================================================
 """
 AI Stethoscope - PANNs CNN14 Compatibility & Single-File Verification Test
 ========================================================================

@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — DATA VALIDATION] | File: scripts/data_sanity_check.py
+# Purpose: Verifies Processed Tensors, Labels, Shapes & Split Integrity
+# ==============================================================================
 """
 AI Stethoscope - Post-Preprocessing Data Sanity Check
 =====================================================

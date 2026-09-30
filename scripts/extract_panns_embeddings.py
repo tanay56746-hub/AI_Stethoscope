@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+# ==============================================================================
+# [LAYER: RESEARCH SCRIPT — FEATURE EXTRACTION] | File: scripts/extract_panns_embeddings.py
+# Purpose: Batch Extracts 2048-D Frozen PANNs CNN14 Embeddings for Full Dataset
+# ==============================================================================
 """
 AI Stethoscope - Full Frozen PANNs CNN14 Embedding Extraction Pipeline
 ======================================================================
