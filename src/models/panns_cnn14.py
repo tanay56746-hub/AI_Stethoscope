@@ -41,15 +41,18 @@ class STFT(nn.Module):
             stride=hop_length, padding=0, bias=False
         )
 
-        self.conv_real.weight.data = torch.Tensor(
-            np.real(W[:, 0:out_channels] * fft_window[:, None]).T
-        )[:, None, :].contiguous()
-        self.conv_imag.weight.data = torch.Tensor(
-            np.imag(W[:, 0:out_channels] * fft_window[:, None]).T
-        )[:, None, :].contiguous()
-
-        self.conv_real.weight.requires_grad = False
-        self.conv_imag.weight.requires_grad = False
+        self.conv_real.weight = nn.Parameter(
+            torch.Tensor(
+                np.real(W[:, 0:out_channels] * fft_window[:, None]).T
+            )[:, None, :].contiguous(),
+            requires_grad=False
+        )
+        self.conv_imag.weight = nn.Parameter(
+            torch.Tensor(
+                np.imag(W[:, 0:out_channels] * fft_window[:, None]).T
+            )[:, None, :].contiguous(),
+            requires_grad=False
+        )
 
     def forward(self, x):
         # x: (batch_size, data_length)

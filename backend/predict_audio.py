@@ -80,18 +80,19 @@ def load_panns_backbone(weights_path: Path) -> Cnn14:
                 f"PANNs pretrained weights not found at: {weights_path} and auto-download failed: {exc}\n"
                 f"Please ensure official Cnn14 weights exist."
             ) from exc
-    panns_model = Cnn14(
-        sample_rate=32000,
-        window_size=1024,
-        hop_size=320,
-        mel_bins=64,
-        fmin=50.0,
-        fmax=14000.0,
-        classes_num=527,
-    )
-    checkpoint = torch.load(weights_path, map_location="cpu", weights_only=False, mmap=True)
+    with torch.device('meta'):
+        panns_model = Cnn14(
+            sample_rate=32000,
+            window_size=1024,
+            hop_size=320,
+            mel_bins=64,
+            fmin=50.0,
+            fmax=14000.0,
+            classes_num=527,
+        )
+    checkpoint = torch.load(weights_path, map_location="cpu", weights_only=False)
     state_dict = checkpoint["model"] if "model" in checkpoint else checkpoint
-    panns_model.load_state_dict(state_dict, strict=True)
+    panns_model.load_state_dict(state_dict, strict=True, assign=True)
     
     import gc
     del checkpoint
@@ -111,14 +112,15 @@ def load_multitask_model(checkpoint_path: Path) -> FinalMultiTaskStethoscopeMode
             f"Model checkpoint not found at: {checkpoint_path}\n"
             f"Please ensure the final multi-task checkpoint exists."
         )
-    model = FinalMultiTaskStethoscopeModel()
-    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False, mmap=True)
+    with torch.device('meta'):
+        model = FinalMultiTaskStethoscopeModel()
+    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
     state_dict = (
         checkpoint["model_state"]
         if "model_state" in checkpoint
         else checkpoint
     )
-    model.load_state_dict(state_dict, strict=True)
+    model.load_state_dict(state_dict, strict=True, assign=True)
     
     import gc
     del checkpoint
