@@ -89,9 +89,15 @@ def load_panns_backbone(weights_path: Path) -> Cnn14:
         fmax=14000.0,
         classes_num=527,
     )
-    checkpoint = torch.load(weights_path, map_location="cpu", weights_only=False)
+    checkpoint = torch.load(weights_path, map_location="cpu", weights_only=False, mmap=True)
     state_dict = checkpoint["model"] if "model" in checkpoint else checkpoint
     panns_model.load_state_dict(state_dict, strict=True)
+    
+    import gc
+    del checkpoint
+    del state_dict
+    gc.collect()
+
     panns_model.eval()
     for param in panns_model.parameters():
         param.requires_grad = False
@@ -106,13 +112,19 @@ def load_multitask_model(checkpoint_path: Path) -> FinalMultiTaskStethoscopeMode
             f"Please ensure the final multi-task checkpoint exists."
         )
     model = FinalMultiTaskStethoscopeModel()
-    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
+    checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False, mmap=True)
     state_dict = (
         checkpoint["model_state"]
         if "model_state" in checkpoint
         else checkpoint
     )
     model.load_state_dict(state_dict, strict=True)
+    
+    import gc
+    del checkpoint
+    del state_dict
+    gc.collect()
+    
     model.eval()
     for param in model.parameters():
         param.requires_grad = False

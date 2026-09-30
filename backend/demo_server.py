@@ -332,6 +332,9 @@ def run_server(port: int = None, host: str = None):
     if host is None:
         host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "0.0.0.0")
 
+    import torch
+    torch.set_num_threads(1)  # Save memory on Render free tier
+    
     server_address = (host, port)
     # Warm up inference engine so models are preloaded before first user click
     print("=" * 60, flush=True)
