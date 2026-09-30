@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
-  const backendUrl = process.env.EXTERNAL_BACKEND_URL || process.env.RENDER_BACKEND_URL;
+  const backendUrl = process.env.EXTERNAL_BACKEND_URL || process.env.RENDER_BACKEND_URL || 'https://ai-stethoscope-1.onrender.com';
   if (backendUrl) {
     try {
       const targetUrl = `${backendUrl.replace(/\/$/, '')}/api/samples`;
