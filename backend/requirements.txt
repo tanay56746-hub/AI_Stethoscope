@@ -1,0 +1,20 @@
+# ==============================================================================
+# [LAYER: BACKEND PYTHON DEPENDENCIES] | File: backend/requirements.txt
+# Purpose: Required Python Packages for AI Stethoscope Backend & ML Inference
+# Usage:   pip install -r backend/requirements.txt  (or inside backend/: pip install -r requirements.txt)
+# ==============================================================================
+
+# Deep Learning & Tensor Computation
+torch>=2.0.0
+torchaudio>=2.0.0
+numpy>=1.24.0
+
+# Audio Signal Processing & Spectral Feature Extraction
+scipy>=1.10.0
+librosa>=0.10.0
+soundfile>=0.12.1
+soxr>=0.3.7
+
+# Evaluation Metrics & Utilities
+scikit-learn>=1.3.0
+python-dotenv>=1.0.0
