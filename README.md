@@ -1,5 +1,13 @@
-# AI Stethoscope: Intelligent Multi-Task Heart & Lung Sound Analysis
+---
+title: AI Stethoscope Backend
+emoji: 🩺
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+---
 
+# AI Stethoscope: Intelligent Multi-Task Heart & Lung Sound Analysis
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.6-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg?style=flat&logo=react)](https://react.dev)
 [![Vite](https://img.shields.io/badge/Vite-8-646CFF.svg?style=flat&logo=vite)](https://vitejs.dev)
