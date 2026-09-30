@@ -326,7 +326,12 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
                     pass
 
 
-def run_server(port: int = 8000, host: str = "127.0.0.1"):
+def run_server(port: int = None, host: str = None):
+    if port is None:
+        port = int(os.environ.get("PORT", os.environ.get("BACKEND_PORT", "8000")))
+    if host is None:
+        host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "0.0.0.0")
+
     server_address = (host, port)
     # Warm up inference engine so models are preloaded before first user click
     print("=" * 60, flush=True)
@@ -352,7 +357,7 @@ def run_server(port: int = 8000, host: str = "127.0.0.1"):
 
 if __name__ == "__main__":
     default_port = int(os.environ.get("PORT", os.environ.get("BACKEND_PORT", "8000")))
-    default_host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "127.0.0.1")
+    default_host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "0.0.0.0")
     parser = argparse.ArgumentParser(description="AI Stethoscope Demonstration Server")
     parser.add_argument("--port", type=int, default=default_port, help=f"Server port (default: {default_port})")
     parser.add_argument("--host", type=str, default=default_host, help=f"Host address (default: {default_host})")

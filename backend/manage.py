@@ -25,7 +25,7 @@ from backend.demo_server import run_server
 def main():
     args = sys.argv[1:]
     port = int(os.environ.get("PORT", os.environ.get("BACKEND_PORT", "8000")))
-    host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "127.0.0.1")
+    host = "0.0.0.0" if "PORT" in os.environ else os.environ.get("BACKEND_HOST", "0.0.0.0")
 
     for arg in args:
         if arg == "runserver":
