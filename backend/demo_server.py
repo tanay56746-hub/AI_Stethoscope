@@ -53,8 +53,21 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(self.frontend_dist if self.frontend_dist.exists() else PROJECT_ROOT), **kwargs)
 
     def end_headers(self):
-        cors_origin = os.environ.get("CORS_ALLOWED_ORIGINS", "*")
-        self.send_header("Access-Control-Allow-Origin", cors_origin)
+        cors_config = os.environ.get("CORS_ALLOWED_ORIGINS", "*").strip()
+        req_origin = self.headers.get("Origin", "")
+
+        if cors_config == "*":
+            allowed_origin = "*"
+        elif req_origin:
+            allowed_list = [o.strip() for o in cors_config.split(",") if o.strip()]
+            if req_origin in allowed_list or "*" in allowed_list:
+                allowed_origin = req_origin
+            else:
+                allowed_origin = allowed_list[0] if allowed_list else "*"
+        else:
+            allowed_origin = cors_config.split(",")[0].strip() if cors_config else "*"
+
+        self.send_header("Access-Control-Allow-Origin", allowed_origin)
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Access-Control-Allow-Headers", "Content-Type, Accept, Authorization")
         self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
@@ -113,9 +126,27 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
 
     def handle_status(self):
         """Return model readiness status and verified technical specifications."""
+        is_ready = False
+        error_msg = None
+        checkpoint_name = "N/A"
+        panns_name = "N/A"
+
+        try:
+            engine = StethoscopeInferenceEngine.get_instance()
+            panns_ok = hasattr(engine, "panns_model") and engine.panns_model is not None
+            multitask_ok = hasattr(engine, "multitask_model") and engine.multitask_model is not None
+            is_ready = bool(panns_ok and multitask_ok)
+            if is_ready:
+                checkpoint_name = engine.checkpoint_path.name
+                panns_name = engine.panns_weights_path.name
+        except Exception as exc:
+            is_ready = False
+            error_msg = str(exc)
+
         response = {
-            "status": "ready",
-            "model_ready": True,
+            "status": "ready" if is_ready else "error",
+            "model_ready": is_ready,
+            "error": error_msg,
             "system_info": {
                 "model_name": "Shared Multitask CNN",
                 "audio_format": "WAV",
@@ -132,11 +163,12 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
                 "audio_sample_rate": "16 kHz",
                 "analysis_window": "5 seconds",
                 "optimizer": "AdamW",
-                "checkpoint": "experiments/multitask_ablations/cnn_physical_panns/checkpoints/best_checkpoint.pt",
+                "checkpoint": f"experiments/multitask_ablations/cnn_physical_panns/checkpoints/{checkpoint_name}",
+                "panns_weights": panns_name,
                 "inference_mode": "evaluation / no gradient",
             },
         }
-        self.send_json(200, response)
+        self.send_json(200 if is_ready else 503, response)
 
     def handle_samples(self):
         """Return verified available demo sample WAV recordings."""
@@ -297,17 +329,19 @@ class StethoscopeRequestHandler(SimpleHTTPRequestHandler):
 def run_server(port: int = 8000, host: str = "127.0.0.1"):
     server_address = (host, port)
     # Warm up inference engine so models are preloaded before first user click
-    print("=" * 60)
-    print("AI STETHOSCOPE DEMONSTRATION BACKEND SERVER")
-    print("=" * 60)
-    print("[Server] Initializing inference pipeline and preloading models...")
-    StethoscopeInferenceEngine.get_instance()
-    print("[Server] Models loaded and ready.")
+    print("=" * 60, flush=True)
+    print("[Render] Starting AI Stethoscope Python backend", flush=True)
+    print("=" * 60, flush=True)
+    print("[Render] Loading inference engine...", flush=True)
+    engine = StethoscopeInferenceEngine.get_instance()
+    print(f"[Render] PANNs checkpoint loaded: {engine.panns_weights_path.name}", flush=True)
+    print(f"[Render] Final checkpoint loaded: {engine.checkpoint_path.name}", flush=True)
+    print("[Render] Models loaded successfully.", flush=True)
 
     httpd = HTTPServer(server_address, StethoscopeRequestHandler)
-    print(f"[Server] Demonstration API server running at: http://{host}:{port}")
-    print("[Server] Press Ctrl+C to terminate.")
-    print("=" * 60)
+    print(f"[Render] Server started and running on {host}:{port}", flush=True)
+    print("[Render] Ready to accept incoming clinical audio requests.", flush=True)
+    print("=" * 60, flush=True)
 
     try:
         httpd.serve_forever()
