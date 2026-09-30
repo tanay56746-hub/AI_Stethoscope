@@ -68,11 +68,18 @@ DISEASE_CLASSES = ["Normal", "Asthma", "Other"]
 
 def load_panns_backbone(weights_path: Path) -> Cnn14:
     """Instantiate and load the frozen PANNs CNN14 feature extractor."""
+    weights_path = Path(weights_path).resolve()
     if not weights_path.exists():
-        raise FileNotFoundError(
-            f"PANNs pretrained weights not found at: {weights_path}\n"
-            f"Please ensure official Cnn14 weights exist."
-        )
+        print(f"[PANNs] Pretrained weights not found at: {weights_path}", flush=True)
+        print("[PANNs] Downloading official Cnn14 weights from Zenodo...", flush=True)
+        try:
+            from backend.download_weights import ensure_weights
+            ensure_weights(destination=weights_path)
+        except Exception as exc:
+            raise FileNotFoundError(
+                f"PANNs pretrained weights not found at: {weights_path} and auto-download failed: {exc}\n"
+                f"Please ensure official Cnn14 weights exist."
+            ) from exc
     panns_model = Cnn14(
         sample_rate=32000,
         window_size=1024,
