@@ -19,6 +19,10 @@ const DEFAULT_SAMPLE = {
   description: "5.0-second cardiac recording from training-b set",
 };
 
+// If VITE_BACKEND_URL or VITE_API_URL is configured (e.g. your Render deployment URL),
+// the frontend connects directly to Render. Otherwise, it defaults to relative `/api`.
+const API_BASE = (import.meta.env.VITE_BACKEND_URL || import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+
 export default function App() {
   const [modelStatus, setModelStatus] = useState({ ready: true, info: null });
   const [demoSamples, setDemoSamples] = useState([DEFAULT_SAMPLE]);
@@ -30,7 +34,7 @@ export default function App() {
 
   // Load status and samples on mount
   useEffect(() => {
-    fetch('/api/status')
+    fetch(`${API_BASE}/api/status`)
       .then((res) => {
         if (!res.ok) throw new Error('Backend server is not reachable');
         return res.json();
@@ -44,7 +48,7 @@ export default function App() {
         console.warn('API status note:', err);
       });
 
-    fetch('/api/samples')
+    fetch(`${API_BASE}/api/samples`)
       .then((res) => res.json())
       .then((data) => {
         if (data.samples && data.samples.length > 0) {
@@ -68,7 +72,7 @@ export default function App() {
       if (selectedSample) {
         // 1. Attempt call to live API / serverless endpoint
         try {
-          response = await fetch('/api/predict', {
+          response = await fetch(`${API_BASE}/api/predict`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -106,7 +110,7 @@ export default function App() {
           const formData = new FormData();
           formData.append('audio', selectedFile, selectedFile.name);
 
-          response = await fetch('/api/predict', {
+          response = await fetch(`${API_BASE}/api/predict`, {
             method: 'POST',
             body: formData,
           });

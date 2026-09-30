@@ -2,12 +2,30 @@
 // [LAYER: VERCEL SERVERLESS BRIDGE] | File: api/samples.js
 // Purpose: Cloud Serverless Sample Audio Metadata Endpoint (/api/samples)
 // =============================================================================
-export default function handler(req, res) {
+
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
+  const backendUrl = process.env.EXTERNAL_BACKEND_URL || process.env.RENDER_BACKEND_URL;
+  if (backendUrl) {
+    try {
+      const targetUrl = `${backendUrl.replace(/\/$/, '')}/api/samples`;
+      const response = await fetch(targetUrl, {
+        headers: { 'Accept': 'application/json' },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        return res.status(200).json(data);
+      }
+    } catch (err) {
+      console.warn('[Vercel Bridge] Failed to fetch samples from Render backend:', err.message);
+    }
+  }
+
+  // Fallback sample
   return res.status(200).json({
     success: true,
     samples: [

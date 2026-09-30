@@ -2,12 +2,30 @@
 // [LAYER: VERCEL SERVERLESS BRIDGE] | File: api/status.js
 // Purpose: Cloud Serverless Model Status & Specs Endpoint (/api/status)
 // =============================================================================
-export default function handler(req, res) {
+
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
+  const backendUrl = process.env.EXTERNAL_BACKEND_URL || process.env.RENDER_BACKEND_URL;
+  if (backendUrl) {
+    try {
+      const targetUrl = `${backendUrl.replace(/\/$/, '')}/api/status`;
+      const response = await fetch(targetUrl, {
+        headers: { 'Accept': 'application/json' },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        return res.status(200).json(data);
+      }
+    } catch (err) {
+      console.warn('[Vercel Bridge] Failed to fetch status from Render backend:', err.message);
+    }
+  }
+
+  // Fallback status
   return res.status(200).json({
     status: "ready",
     model_ready: true,
