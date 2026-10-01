@@ -16,8 +16,8 @@ COPY . .
 RUN python backend/download_weights.py
 
 # HuggingFace Spaces passes the PORT env variable (usually 7860)
-ENV PORT=7860
-EXPOSE 7860
+ENV PORT=8000
+EXPOSE 8000
 
 # Start the server
 CMD ["python", "manage.py", "runserver"]
