@@ -21,7 +21,7 @@ const DEFAULT_SAMPLE = {
 
 // If VITE_BACKEND_URL or VITE_API_URL is configured (e.g. your Render deployment URL),
 // the frontend connects directly to Render. Otherwise, it defaults to relative `/api`.
-const API_BASE = (import.meta.env.VITE_BACKEND_URL || import.meta.env.VITE_API_URL || 'https://ai-stethoscope-1.onrender.com').replace(/\/$/, '');
+const API_BASE = (import.meta.env.VITE_BACKEND_URL || import.meta.env.VITE_API_URL || 'https://ai-stethoscope-backend-production.up.railway.app').replace(/\/$/, '');
 
 export default function App() {
   const [modelStatus, setModelStatus] = useState({ ready: true, info: null });
